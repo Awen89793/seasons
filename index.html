@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button class="sidebar-toggle" aria-label="打开目录">☰ 目录</button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">四季导航</div>
+        <nav class="sidebar-nav">
+            <a href="index.html">首页</a>
+            <a class="season-spring" href="spring.html">春 · 在昨日的春天等待你</a>
+            <a class="season-summer" href="summer.html">夏 · 通往夏天的隧道，再见的出口</a>
+            <a class="season-autumn" href="autumn.html">秋 · 琥珀之秋，0秒之旅</a>
+            <a class="season-winter" href="winter.html">冬 · 永冬无境，幻梦残墟</a>
+        </nav>
+    </aside>
+
     <header>
         <nav>
             <a href="index.html">首页</a>
@@ -16,22 +30,128 @@
             <a href="winter.html">冬</a>
         </nav>
     </header>
+
     <div class="container">
         <div class="card">
-            <h1>欢迎来到八目迷的四季世界</h1>
-            <p>这里收录了关于"时空与四季"系列的所有作品解析与时间线梳理。</p>
-            <p>请选择一个季节开始探索：</p>
-            <ul>
-                <li><a href="spring.html">在昨日的春天等待你</a></li>
-                <li><a href="summer.html">通往夏天的隧道，再见的出口</a></li>
-                <li><a href="autumn.html">琥珀之秋，0秒之旅</a></li>
-                <li><a href="winter.html">永冬无境，幻梦残墟</a></li>
-            </ul>
+            <h1>八目迷 · 时空与四季专题站</h1>
+            <p>
+                这里是关于八目迷“时空与四季”系列的专题页面。系列以季节为舞台，以时间为线索，讲述少年少女在遗憾、告别、相遇与循环中寻找未来的故事。
+            </p>
+
+            <div class="toc">
+                <h3>页面导航</h3>
+                <ul>
+                    <li><a href="#about">系列简介</a></li>
+                    <li><a href="#seasons">四季作品</a></li>
+                    <li><a href="#theme">共同主题</a></li>
+                    <li><a href="#visit">开始阅读</a></li>
+                </ul>
+            </div>
+
+            <section id="about">
+                <h2>系列简介</h2>
+                <p>
+                    “时空与四季”系列由日本轻小说作家八目迷创作，四部作品分别对应春、夏、秋、冬四个季节。每一部都围绕一种特殊的时间现象展开：时间倒流、时间加速、时间静止与时间循环。
+                </p>
+                <p>
+                    这些故事并不只是单纯的奇幻设定，而是把“时间”作为人物情感的放大器。角色们往往因为失去、遗憾、孤独或无法说出口的心意，被卷入异常的时间之中；而故事真正的出口，通常不是改变过去，而是学会面对当下，走向未来。
+                </p>
+            </section>
+
+            <section id="seasons">
+                <h2>四季作品</h2>
+
+                <h3>春：在昨日的春天等待你</h3>
+                <p>
+                    <span class="tag tag-spring">时间倒流</span>
+                    <span class="tag tag-spring">樱花</span>
+                    <span class="tag tag-spring">青春</span>
+                </p>
+                <p>
+                    《春》以时间倒流为核心设定。故事围绕高中生船见奏展开，他在某个春天之后，意识会回到过去。为了弥补遗憾、拯救重要的人，他一次次回到昨日的春天。作品氛围温柔而伤感，樱花、校园与未说出口的心意构成了主要意象。
+                </p>
+
+                <h3>夏：通往夏天的隧道，再见的出口</h3>
+                <p>
+                    <span class="tag tag-summer">时间加速</span>
+                    <span class="tag tag-summer">浦岛隧道</span>
+                    <span class="tag tag-summer">告别</span>
+                </p>
+                <p>
+                    《夏》是系列中知名度最高的一部。塔野薰为了寻找因事故离世的妹妹，进入了传说中能实现愿望的“浦岛隧道”。隧道内部时间流速与外界不同，进入其中的人仿佛穿越了夏天，也穿越了告别的边界。作品兼具青春感与奇幻感，是很多人认识八目迷的起点。
+                </p>
+
+                <h3>秋：琥珀之秋，0秒之旅</h3>
+                <p>
+                    <span class="tag tag-autumn">时间静止</span>
+                    <span class="tag tag-autumn">修学旅行</span>
+                    <span class="tag tag-autumn">琥珀色世界</span>
+                </p>
+                <p>
+                    《秋》的设定非常独特：修学旅行中，世界突然静止，时间仿佛停在“0秒”。麦野茅人与井熊光成为唯二能够行动的人。琥珀色的静止世界里，两人展开了一段短暂却深刻的旅程。相比其他三部，这部更强调瞬间、相遇与共同经历的意义。
+                </p>
+
+                <h3>冬：永冬无境，幻梦残墟</h3>
+                <p>
+                    <span class="tag tag-winter">时间循环</span>
+                    <span class="tag tag-winter">游乐园</span>
+                    <span class="tag tag-winter">无限同一天</span>
+                </p>
+                <p>
+                    《冬》以时间循环为舞台。龙崎贤生被困在游乐园的同一天里，与已经循环上千次的少女亚世美相遇。两人必须找出循环的原因，并决定该如何离开这个永远停留在冬天的地方。作品带有悬疑感，也延续了系列“救赎与未来”的主题。
+                </p>
+            </section>
+
+            <section id="theme">
+                <h2>共同主题</h2>
+                <ul>
+                    <li><strong>时间异常：</strong>每一部都有一个独特的时间规则。</li>
+                    <li><strong>季节意象：</strong>樱花、夏日、琥珀色秋天与永冬游乐园分别承载不同情绪。</li>
+                    <li><strong>告别与救赎：</strong>角色们都在学习如何面对失去。</li>
+                    <li><strong>青春与未来：</strong>即使时间停滞，人仍然需要向前走。</li>
+                </ul>
+            </section>
+
+            <section id="visit">
+                <h2>开始探索</h2>
+                <ul>
+                    <li><a href="spring.html">进入《春》</a></li>
+                    <li><a href="summer.html">进入《夏》</a></li>
+                    <li><a href="autumn.html">进入《秋》</a></li>
+                    <li><a href="winter.html">进入《冬》</a></li>
+                </ul>
+            </section>
         </div>
     </div>
+
     <footer>
         <p>本站为粉丝制作，非官方网站</p>
     </footer>
+
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("sidebarOverlay");
+        const toggle = document.querySelector(".sidebar-toggle");
+
+        function openSidebar() {
+            sidebar.classList.add("active");
+            overlay.classList.add("active");
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+
+        toggle.addEventListener("click", () => {
+            if (sidebar.classList.contains("active")) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        });
+
+        overlay.addEventListener("click", closeSidebar);
+    </script>
 </body>
 </html>
-
