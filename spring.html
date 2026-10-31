@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-spring">
+    <button class="sidebar-toggle" aria-label="打开目录">☰ 目录</button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">四季导航</div>
+        <nav class="sidebar-nav">
+            <a href="index.html">首页</a>
+            <a class="season-spring" href="spring.html">春 · 在昨日的春天等待你</a>
+            <a class="season-summer" href="summer.html">夏 · 通往夏天的隧道，再见的出口</a>
+            <a class="season-autumn" href="autumn.html">秋 · 琥珀之秋，0秒之旅</a>
+            <a class="season-winter" href="winter.html">冬 · 永冬无境，幻梦残墟</a>
+        </nav>
+    </aside>
+
     <header>
         <nav>
             <a href="index.html">首页</a>
@@ -16,15 +30,98 @@
             <a href="winter.html">冬</a>
         </nav>
     </header>
+
     <div class="container">
         <div class="card spring-theme">
             <h2>在昨日的春天等待你</h2>
-            <p><strong>核心设定：</strong>时间倒流 / 樱花 / 遗憾</p>
-            <p>在这里填入关于《春》的详细剧情、角色介绍以及你对时间线的分析...</p>
+            <p>
+                <span class="tag tag-spring">时间倒流</span>
+                <span class="tag tag-spring">樱花</span>
+                <span class="tag tag-spring">校园</span>
+                <span class="tag tag-spring">遗憾</span>
+            </p>
+
+            <div class="toc">
+                <h3>本页导航</h3>
+                <ul>
+                    <li><a href="#spring-story">故事简介</a></li>
+                    <li><a href="#spring-characters">主要角色</a></li>
+                    <li><a href="#spring-time">时间设定</a></li>
+                    <li><a href="#spring-theme">主题关键词</a></li>
+                </ul>
+            </div>
+
+            <section id="spring-story">
+                <h3>故事简介</h3>
+                <p>
+                    《在昨日的春天等待你》以春天为背景，讲述了高中生船见奏在经历某个事件后，意识会回到过去。他试图借助这种能力改变已经发生的事，拯救重要的人，也弥补自己心中的遗憾。
+                </p>
+                <p>
+                    故事中的春天并不只是季节，更像是一段无法轻易翻篇的记忆。樱花盛开、校园日常、朋友之间的羁绊，以及那些来不及说出口的话，都在时间倒流中重新浮现。
+                </p>
+            </section>
+
+            <section id="spring-characters">
+                <h3>主要角色</h3>
+                <p>
+                    <strong>船见奏：</strong>本作主角。他在时间倒流中不断回到过去，试图改变某个重要的结局。面对重复的春天，他逐渐意识到，仅仅回到过去并不足以解决所有问题。
+                </p>
+                <p>
+                    <strong>重要同伴：</strong>与奏关系密切的人。她的存在让“回到昨天”这件事从单纯的奇幻设定，变成了关于守护与告别的选择。
+                </p>
+            </section>
+
+            <section id="spring-time">
+                <h3>时间设定</h3>
+                <p>
+                    《春》的核心能力是时间倒流。主角的意识会回到过去，从而获得重新行动的机会。但这种能力并非万能，它带来的不只是希望，也有重复、迷茫与责任。
+                </p>
+                <p>
+                    你可以在此处继续补充时间线图解，例如：主角第一次回到过去的时间点、关键事件发生顺序、不同选择带来的结果差异等。
+                </p>
+            </section>
+
+            <section id="spring-theme">
+                <h3>主题关键词</h3>
+                <ul>
+                    <li><strong>遗憾：</strong>如果昨天可以重来，是否就能避免失去？</li>
+                    <li><strong>守护：</strong>回到过去不是为了逃避，而是为了守护重要的人。</li>
+                    <li><strong>春天：</strong>樱花象征短暂而美丽的瞬间。</li>
+                    <li><strong>未来：</strong>即使能回到昨日，人终究要走向明天。</li>
+                </ul>
+            </section>
         </div>
     </div>
+
     <footer>
         <p>本站为粉丝制作，非官方网站</p>
     </footer>
+
+        <script>
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("sidebarOverlay");
+        const toggle = document.querySelector(".sidebar-toggle");
+
+        function openSidebar() {
+            sidebar.classList.add("active");
+            overlay.classList.add("active");
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+
+        toggle.addEventListener("click", () => {
+            if (sidebar.classList.contains("active")) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        });
+
+        overlay.addEventListener("click", closeSidebar);
+    </script>
 </body>
 </html>
+
