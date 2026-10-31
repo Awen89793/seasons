@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-summer">
+    <button class="sidebar-toggle" aria-label="打开目录">☰ 目录</button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">四季导航</div>
+        <nav class="sidebar-nav">
+            <a href="index.html">首页</a>
+            <a class="season-spring" href="spring.html">春 · 在昨日的春天等待你</a>
+            <a class="season-summer" href="summer.html">夏 · 通往夏天的隧道，再见的出口</a>
+            <a class="season-autumn" href="autumn.html">秋 · 琥珀之秋，0秒之旅</a>
+            <a class="season-winter" href="winter.html">冬 · 永冬无境，幻梦残墟</a>
+        </nav>
+    </aside>
+
     <header>
         <nav>
             <a href="index.html">首页</a>
@@ -16,16 +30,97 @@
             <a href="winter.html">冬</a>
         </nav>
     </header>
+
     <div class="container">
         <div class="card summer-theme">
             <h2>通往夏天的隧道，再见的出口</h2>
-            <p><strong>核心设定：</strong>时间加速 / 浦岛隧道 / 寻找亡妹</p>
-            <p>在这里填入关于《夏》的详细剧情、角色介绍以及你对时间线的分析...</p>
+            <p>
+                <span class="tag tag-summer">时间加速</span>
+                <span class="tag tag-summer">浦岛隧道</span>
+                <span class="tag tag-summer">告别</span>
+                <span class="tag tag-summer">青春</span>
+            </p>
+
+            <div class="toc">
+                <h3>本页导航</h3>
+                <ul>
+                    <li><a href="#summer-story">故事简介</a></li>
+                    <li><a href="#summer-characters">主要角色</a></li>
+                    <li><a href="#summer-tunnel">浦岛隧道设定</a></li>
+                    <li><a href="#summer-theme">主题关键词</a></li>
+                </ul>
+            </div>
+
+            <section id="summer-story">
+                <h3>故事简介</h3>
+                <p>
+                    《通往夏天的隧道，再见的出口》讲述了高中生塔野薰在偶然间发现了传说中的“浦岛隧道”。据说进入隧道的人可以实现愿望，但代价是失去在隧道中度过的那段时间。
+                </p>
+                <p>
+                    薰为了找回因事故去世的妹妹，独自进入了隧道。在那里，他遇到了转学生花城杏子。两人在隧道中探索，也在这个过程中逐渐靠近。故事以夏天为舞台，讲述了一段关于告别、成长与重逢的青春物语。
+                </p>
+            </section>
+
+            <section id="summer-characters">
+                <h3>主要角色</h3>
+                <p>
+                    <strong>塔野薰：</strong>本作男主角。妹妹的离世让他一直无法释怀，浦岛隧道给了他一个"也许能再见一面"的机会。他性格内敛，但在关键时刻有着坚定的决心。
+                </p>
+                <p>
+                    <strong>花城杏子：</strong>本作女主角。转学来到薰所在的小镇，对浦岛隧道有着自己的好奇与目的。她开朗而神秘，与薰一起探索隧道的秘密。
+                </p>
+            </section>
+
+            <section id="summer-tunnel">
+                <h3>浦岛隧道设定</h3>
+                <p>
+                    浦岛隧道是故事的核心设定。进入隧道的人会经历与外界不同的时间流速——隧道内的几个小时，可能对应外界的数年。这种时间差让隧道既是"实现愿望的地方"，也是"夺走时间的地方"。
+                </p>
+                <p>
+                    你可以在这里补充隧道内部的场景描写、时间差的具体数据、以及不同角色进入隧道后的经历对比。
+                </p>
+            </section>
+
+            <section id="summer-theme">
+                <h3>主题关键词</h3>
+                <ul>
+                    <li><strong>告别：</strong>如何与失去的人好好说再见。</li>
+                    <li><strong>时间代价：</strong>实现愿望的同时，也在失去时间。</li>
+                    <li><strong>夏天：</strong>蝉鸣、向日葵、入道云，夏天象征短暂而热烈的青春。</li>
+                    <li><strong>重逢：</strong>隧道尽头是否是出口，还是新的开始？</li>
+                </ul>
+            </section>
         </div>
     </div>
+
     <footer>
         <p>本站为粉丝制作，非官方网站</p>
     </footer>
+
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("sidebarOverlay");
+        const toggle = document.querySelector(".sidebar-toggle");
+
+        function openSidebar() {
+            sidebar.classList.add("active");
+            overlay.classList.add("active");
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+
+        toggle.addEventListener("click", () => {
+            if (sidebar.classList.contains("active")) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        });
+
+        overlay.addEventListener("click", closeSidebar);
+    </script>
 </body>
 </html>
-
