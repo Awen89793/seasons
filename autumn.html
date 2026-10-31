@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-autumn">
+    <button class="sidebar-toggle" aria-label="打开目录">☰ 目录</button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">四季导航</div>
+        <nav class="sidebar-nav">
+            <a href="index.html">首页</a>
+            <a class="season-spring" href="spring.html">春 · 在昨日的春天等待你</a>
+            <a class="season-summer" href="summer.html">夏 · 通往夏天的隧道，再见的出口</a>
+            <a class="season-autumn" href="autumn.html">秋 · 琥珀之秋，0秒之旅</a>
+            <a class="season-winter" href="winter.html">冬 · 永冬无境，幻梦残墟</a>
+        </nav>
+    </aside>
+
     <header>
         <nav>
             <a href="index.html">首页</a>
@@ -16,16 +30,97 @@
             <a href="winter.html">冬</a>
         </nav>
     </header>
+
     <div class="container">
         <div class="card autumn-theme">
             <h2>琥珀之秋，0秒之旅</h2>
-            <p><strong>核心设定：</strong>时间静止 / 修学旅行 / 唯二的行动者</p>
-            <p>在这里填入关于《秋》的详细剧情、角色介绍以及你对时间线的分析...</p>
+            <p>
+                <span class="tag tag-autumn">时间静止</span>
+                <span class="tag tag-autumn">修学旅行</span>
+                <span class="tag tag-autumn">琥珀色世界</span>
+                <span class="tag tag-autumn">相遇</span>
+            </p>
+
+            <div class="toc">
+                <h3>本页导航</h3>
+                <ul>
+                    <li><a href="#autumn-story">故事简介</a></li>
+                    <li><a href="#autumn-characters">主要角色</a></li>
+                    <li><a href="#autumn-time">时间静止设定</a></li>
+                    <li><a href="#autumn-theme">主题关键词</a></li>
+                </ul>
+            </div>
+
+            <section id="autumn-story">
+                <h3>故事简介</h3>
+                <p>
+                    《琥珀之秋，0秒之旅》以修学旅行为舞台。某一天，整个世界突然静止了——时间停在"0秒"，所有人都凝固在原地，唯有麦野茅人和井熊光还能自由活动。
+                </p>
+                <p>
+                    在琥珀色的静止世界里，两人成为彼此唯一的同伴。他们走过空无一人的街道，探索这个被时间遗忘的世界，也在短暂的旅途中建立起深刻的羁绊。这部作品强调"瞬间"的价值——即使时间停止，人与人的相遇依然真实存在。
+                </p>
+            </section>
+
+            <section id="autumn-characters">
+                <h3>主要角色</h3>
+                <p>
+                    <strong>麦野茅人：</strong>本作男主角。修学旅行中的普通高中生，在世界静止后发现自己仍能行动。面对突如其来的异常，他从困惑逐渐转变为主动探索这个世界。
+                </p>
+                <p>
+                    <strong>井熊光：</strong>本作女主角。与茅人一样是唯二的行动者。她有着自己的秘密和目的，与茅人在静止世界中的互动构成了故事的核心。
+                </p>
+            </section>
+
+            <section id="autumn-time">
+                <h3>时间静止设定</h3>
+                <p>
+                    《秋》的核心设定是"时间静止"。整个世界被冻结在琥珀色的光线中，只有主角两人能够行动。这种设定让故事呈现出一种独特的氛围——既孤独又浪漫，既停滞又充满可能。
+                </p>
+                <p>
+                    你可以在这里补充静止世界的具体规则、两人能够行动的原因推测、以及静止世界中发生的各个事件的时间顺序。
+                </p>
+            </section>
+
+            <section id="autumn-theme">
+                <h3>主题关键词</h3>
+                <ul>
+                    <li><strong>瞬间：</strong>即使时间停止，此刻的相遇依然珍贵。</li>
+                    <li><strong>孤独：</strong>静止世界中唯二的行动者，彼此是唯一的依靠。</li>
+                    <li><strong>琥珀色：</strong>秋天的色调，象征凝固而美丽的瞬间。</li>
+                    <li><strong>旅程：</strong>0秒的旅途，却可能比一生更深刻。</li>
+                </ul>
+            </section>
         </div>
     </div>
+
     <footer>
         <p>本站为粉丝制作，非官方网站</p>
     </footer>
+
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("sidebarOverlay");
+        const toggle = document.querySelector(".sidebar-toggle");
+
+        function openSidebar() {
+            sidebar.classList.add("active");
+            overlay.classList.add("active");
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+
+        toggle.addEventListener("click", () => {
+            if (sidebar.classList.contains("active")) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        });
+
+        overlay.addEventListener("click", closeSidebar);
+    </script>
 </body>
 </html>
-
