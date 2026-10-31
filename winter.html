@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-winter">
+    <button class="sidebar-toggle" aria-label="打开目录">☰ 目录</button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">四季导航</div>
+        <nav class="sidebar-nav">
+            <a href="index.html">首页</a>
+            <a class="season-spring" href="spring.html">春 · 在昨日的春天等待你</a>
+            <a class="season-summer" href="summer.html">夏 · 通往夏天的隧道，再见的出口</a>
+            <a class="season-autumn" href="autumn.html">秋 · 琥珀之秋，0秒之旅</a>
+            <a class="season-winter" href="winter.html">冬 · 永冬无境，幻梦残墟</a>
+        </nav>
+    </aside>
+
     <header>
         <nav>
             <a href="index.html">首页</a>
@@ -16,16 +30,98 @@
             <a href="winter.html" style="color:var(--winter-color)">冬</a>
         </nav>
     </header>
+
     <div class="container">
         <div class="card winter-theme">
             <h2>永冬无境，幻梦残墟</h2>
-            <p><strong>核心设定：</strong>时间循环 / 游乐园 / 无限同一天</p>
-            <p>在这里填入关于《冬》的详细剧情、角色介绍以及你对时间线的分析...</p>
+            <p>
+                <span class="tag tag-winter">时间循环</span>
+                <span class="tag tag-winter">游乐园</span>
+                <span class="tag tag-winter">无限同一天</span>
+                <span class="tag tag-winter">救赎</span>
+            </p>
+
+            <div class="toc">
+                <h3>本页导航</h3>
+                <ul>
+                    <li><a href="#winter-story">故事简介</a></li>
+                    <li><a href="#winter-characters">主要角色</a></li>
+                    <li><a href="#winter-loop">时间循环设定</a></li>
+                    <li><a href="#winter-theme">主题关键词</a></li>
+                </ul>
+            </div>
+
+            <section id="winter-story">
+                <h3>故事简介</h3>
+                <p>
+                    《永冬无境，幻梦残墟》以时间循环为核心设定。高中生龙崎贤生在某一天发现自己被困在了游乐园的同一天里——无论怎样度过，醒来后都会回到同一个早晨。
+                </p>
+                <p>
+                    在循环中，他遇到了已经重复了上千次同一天的少女亚世美。两人开始合作，试图找出循环的原因，并寻找离开这个永冬之地的方法。游乐园里的摩天轮、旋转木马和闪烁的灯光，在无限重复中呈现出梦幻而哀伤的美感。
+                </p>
+            </section>
+
+            <section id="winter-characters">
+                <h3>主要角色</h3>
+                <p>
+                    <strong>龙崎贤生：</strong>本作男主角。意外陷入时间循环的高中生，从最初的困惑到逐渐接受现实，并与亚世美一起寻找出口。
+                </p>
+                <p>
+                    <strong>亚世美：</strong>本作女主角。已经在循环中度过上千次的少女，对游乐园的每一天了如指掌。她的存在是解开循环谜团的关键。
+                </p>
+            </section>
+
+            <section id="winter-loop">
+                <h3>时间循环设定</h3>
+                <p>
+                    《冬》的核心设定是"时间循环"。主角被困在游乐园的同一天，每次循环结束后都会重置到起点。与《春》的倒流不同，循环意味着无论做什么都会被"清零"，这带来了独特的无力感与探索欲。
+                </p>
+                <p>
+                    你可以在这里补充循环的具体规则、每次循环中发生的关键事件、以及两人逐渐发现的关于游乐园和循环本身的线索。
+                </p>
+            </section>
+
+            <section id="winter-theme">
+                <h3>主题关键词</h3>
+                <ul>
+                    <li><strong>循环：</strong>无限重复的同一天，是诅咒还是救赎的机会？</li>
+                    <li><strong>游乐园：</strong>本该充满欢乐的地方，在循环中变得梦幻而哀伤。</li>
+                    <li><strong>冬天：</strong>永冬象征停滞与孤独，也象征纯净与等待。</li>
+                    <li><strong>出口：</strong>离开循环意味着什么？是回到现实，还是永远的告别？</li>
+                </ul>
+            </section>
         </div>
     </div>
+
     <footer>
         <p>本站为粉丝制作，非官方网站</p>
     </footer>
+
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("sidebarOverlay");
+        const toggle = document.querySelector(".sidebar-toggle");
+
+        function openSidebar() {
+            sidebar.classList.add("active");
+            overlay.classList.add("active");
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+
+        toggle.addEventListener("click", () => {
+            if (sidebar.classList.contains("active")) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        });
+
+        overlay.addEventListener("click", closeSidebar);
+    </script>
 </body>
 </html>
 
